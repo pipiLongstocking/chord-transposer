@@ -1,0 +1,54 @@
+# To add a new suffix for a given chord
+# 1. add it to the suffixes list.
+# 2. add the diagram and the audio file to the expected path after generating the code.
+
+suffixes:
+  - ""
+  - "maj"
+  - "min"
+  - "7"
+  - "maj7"
+  - "min7"
+  - "dim"
+  - "aug"
+  - "sus4"
+  - "sus2"
+  - "maj6"
+  - "6"
+  - "min6"
+  - "dom7"
+  - "dom9"
+
+# format for finding the diagram files
+diagram_path: ""
+audio_path: ""
+
+basic_chords:
+  - name: A
+    sharp: true
+    flat: true
+    index: 0
+  - name: B
+    sharp: false
+    flat: true
+    index: 1
+  - name: C
+    sharp: true
+    flat: false
+    index: 2
+  - name: D
+    sharp: true
+    flat: true
+    index: 3
+  - name: E
+    sharp: false
+    flat: true
+    index: 4
+  - name: F
+    sharp: true
+    flat: false
+    index: 5
+  - name: G
+    sharp: true
+    flat: true
+    index: 6
