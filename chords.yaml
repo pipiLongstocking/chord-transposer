@@ -22,6 +22,7 @@ suffixes:
 # format for finding the diagram files
 diagram_path: ""
 audio_path: ""
+basic_chord_pattern: r'^(?i)[ABCDEFG]#?'
 
 basic_chords:
   - name: A
