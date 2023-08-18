@@ -36,7 +36,3 @@ def generate(path: str):
         except KeyError:
             print("The key isn't present in the dictionary")
         return None
-# if __name__ == "__chordparser__":
-print(__name__)
-result = generate("./chords.yaml")
-print(result)
