@@ -31,7 +31,15 @@ def generate(path: str):
                     chord_sharps.append(f"{c}#")
                 if chord["flat"] is True:
                     chord_flats.append(f"{c}b")
-            res = [suffixes, diagram_path, audio_path, basic_chord_pattern, chord_sharps, chord_flats, len(chord_sharps)]
+            res = {
+                "suffixes": suffixes,
+                "diagram_path": diagram_path,
+                "audio_path": audio_path,
+                "basic_chord_pattern": basic_chord_pattern,
+                "chord_sharps": chord_sharps,
+                "chord_flats": chord_flats,
+                "chord_len": len(chord_sharps)
+            }
             return res
         except KeyError:
             print("The key isn't present in the dictionary")
