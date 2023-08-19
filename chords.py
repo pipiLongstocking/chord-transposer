@@ -1,4 +1,3 @@
-# TODO: dynamically generate this class with a yaml-base make with details.
 import re
 
 

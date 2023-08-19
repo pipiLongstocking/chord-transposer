@@ -25,13 +25,12 @@ def generate(path: str):
             chord_flats = []
             for chord in basic_chords:
                 c = chord["name"]
-                chord_flats.append(c)
-                chord_sharps.append(c)
                 if chord["sharp"] is True:
+                    chord_sharps.append(c)
                     chord_sharps.append(f"{c}#")
                 if chord["flat"] is True:
                     chord_flats.append(f"{c}b")
-                    chord_flats[-1], chord_flats[-2] = chord_flats[-2], chord_flats[-1]
+                    chord_flats.append(c)
             p = chord_flats.pop(0)
             chord_flats.append(p)
             res = {

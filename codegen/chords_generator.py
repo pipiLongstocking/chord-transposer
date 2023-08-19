@@ -21,5 +21,5 @@ try:
         )
         file.write(content)
         print(f"...wrote {output_file}")
-except:
-    print("failed generating the chords class.")
+except Exception as e:
+    print("failed generating the chords class.", e)
