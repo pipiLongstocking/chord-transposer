@@ -31,6 +31,9 @@ def generate(path: str):
                     chord_sharps.append(f"{c}#")
                 if chord["flat"] is True:
                     chord_flats.append(f"{c}b")
+                    chord_flats[-1], chord_flats[-2] = chord_flats[-2], chord_flats[-1]
+            p = chord_flats.pop(0)
+            chord_flats.append(p)
             res = {
                 "suffixes": suffixes,
                 "diagram_path": diagram_path,
