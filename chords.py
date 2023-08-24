@@ -1,3 +1,4 @@
+# TODO: dynamically generate this class with a yaml-base make with details.
 import re
 
 
@@ -10,12 +11,11 @@ class Chord:
     """
     Chord denotes a musical chord.
     """
-    chords_len = 12
-    chord_sharps = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]
-    chord_flats = ["A", "Bb", "B", "C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab"]
+    chords_len = 10
+    chord_sharps = ['A', 'A#', 'C', 'C#', 'D', 'D#', 'F', 'F#', 'G', 'G#']
+    chord_flats = ['A', 'Bb', 'B', 'Db', 'D', 'Eb', 'E', 'Gb', 'G', 'Ab']
     basic_chord_pattern = r'^(?i)[ABCDEFG]#?'
-    suffixes = ["", "maj", "min", "7", "maj7", "min7", "dim", "aug", "sus4", "sus2", "maj6", "6", "min6", "dom7",
-                "dom9"]
+    suffixes = ['', 'maj', 'min', '7', 'maj7', 'min7', 'dim', 'aug', 'sus4', 'sus2', 'maj6', '6', 'min6', 'dom7', 'dom9']
 
     def __init__(self, notation: str):
         match = re.search(self.basic_chord_pattern, notation)
